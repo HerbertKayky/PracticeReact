@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import "./StartScreen.css";
 
-
-const StartScreen = ({startGame}) => {
-
+const StartScreen = ({ startGame }) => {
   return (
     <div className="start">
       <h1>Secret Word</h1>

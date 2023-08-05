@@ -40,7 +40,7 @@ function App() {
     const word =
       words[category][Math.floor(Math.random() * words[category].length)];
     return { word, category };
-  },[words]);
+  }, [words]);
 
   // Starts the secret word game
   const startGame = useCallback(() => {
@@ -52,16 +52,13 @@ function App() {
 
     wordLetters = wordLetters.map((l) => l.toLowerCase());
 
-    console.log(word, category);
-    console.log(wordLetters);
-
     // Fill states
     setPickedWord(word);
     setPickedCategory(category);
     setLetters(wordLetters);
 
     setGameStage(stages[1].name);
-  },[pickWordAndCategory]);
+  }, [pickWordAndCategory]);
 
   // Process the letter input
   const verifyLetter = (letter) => {
@@ -107,7 +104,10 @@ function App() {
     const uniqueLetters = [...new Set(letters)];
 
     // Win condition
-    if (guessedLetters.length === uniqueLetters.length && gameStage === stages[1].name) {
+    if (
+      guessedLetters.length === uniqueLetters.length &&
+      gameStage === stages[1].name
+    ) {
       // Add score
       setScore((actualScore) => (actualScore += 100));
 
