@@ -1,26 +1,19 @@
-import { useState } from "react";
+import PropTypes from 'prop-types';
 import "./StartScreen.css";
 
-const StartScreen = () => {
-  const [message, setMessage] = useState();
 
-  const handleClick = () => {
-    setMessage("você é muito gay!");
-  };
-
-
-  setTimeout(() => {
-    setMessage(null);
-  }, 5000);
+const StartScreen = ({startGame}) => {
 
   return (
     <div className="start">
       <h1>Secret Word</h1>
-      <p>Clique no botão abaixo para começar a jogar</p>
-      <button onClick={handleClick}>Começar jogo</button>
-      <p>{message}</p>
+      <button onClick={startGame}>Jogar</button>
     </div>
   );
+};
+// Validação de props
+StartScreen.propTypes = {
+  startGame: PropTypes.func.isRequired,
 };
 
 export default StartScreen;
