@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "Celular",
+      "price": "1300",
+      "id": 4
+    },
+    {
+      "name": "Mousepad",
+      "price": "70",
+      "id": 5
+    },
+    {
+      "name": "Suporte Controle",
+      "price": "20",
+      "id": 6
+    },
+    {
+      "name": "Mousepad",
+      "price": "22222",
+      "id": 7
+    },
+    {
+      "name": "Celular",
+      "price": "2",
+      "id": 8
+    },
+    {
+      "name": "Suporte Controle",
+      "price": "2",
+      "id": 9
+    },
+    {
+      "name": "garrafa",
+      "price": "4",
+      "id": 10
+    }
+  ]
+}
