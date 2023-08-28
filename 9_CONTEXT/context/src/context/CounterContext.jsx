@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 // 1 - Criar context
 import { createContext, useState } from "react";
 
@@ -13,4 +14,12 @@ export const CounterContextProvider = ({ children }) => {
       {children}
     </CounterContext.Provider>
   );
+};
+
+// Adicionando validação de props
+CounterContextProvider.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
 };
