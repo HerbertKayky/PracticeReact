@@ -6,11 +6,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import { useThemeContext } from "./hooks/useThemeContext";
 
 function App() {
+  const { theme } = useThemeContext();
+
   return (
-    <div className="App">
-      <h1>React Router Desafio</h1>
+    <div className={`App ${theme === "light" ? "light-theme" : ""}`}>
+      <h1>Context API</h1>
       <BrowserRouter>
         <Navbar />
         <Routes>
