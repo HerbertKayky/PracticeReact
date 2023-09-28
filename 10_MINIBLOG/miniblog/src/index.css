@@ -21,6 +21,7 @@ nav button {
   text-decoration: none;
   background-color: transparent;
   color: #000;
+  border: none;
   transition: 0.4s;
   font-size: 1em;
   cursor: pointer;

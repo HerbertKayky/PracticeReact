@@ -60,6 +60,12 @@ export const useAuthentication = () => {
     }
   };
 
+  // Logout
+  const logout = () => {
+    signOut(auth);
+    checkIfIsCancelled();
+  };
+
   useEffect(() => {
     return () => setCancelled(true);
   }, []);
@@ -69,5 +75,6 @@ export const useAuthentication = () => {
     createUser,
     error,
     loading,
+    logout,
   };
 };

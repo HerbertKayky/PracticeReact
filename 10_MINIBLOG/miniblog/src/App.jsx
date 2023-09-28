@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { useAuthentication } from "./hooks/useAuthentication";
 
 // Context
-import { AuthProvider } from "./context/authContext";
+import { AuthProvider } from "./context/AuthContext";
 
 // Components
 import Navbar from "./components/Navbar";
