@@ -5,3 +5,7 @@
 .login p {
     color: #aaa;
 }
+
+.tip {
+    color: black !important;
+}

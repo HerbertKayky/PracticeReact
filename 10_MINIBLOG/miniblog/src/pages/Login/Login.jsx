@@ -1,6 +1,7 @@
 import styles from "./Login.module.css";
 import { useState, useEffect } from "react";
 import { useAuthentication } from "../../hooks/useAuthentication";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -53,6 +54,13 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          <p className={styles.tip}>
+            Ainda não criou sua conta?
+            <Link to="/register">
+              <strong> Clique aqui </strong>
+            </Link>
+            para se cadastrar!
+          </p>
         </label>
         {!loading && <button className="btn">Entrar</button>}
         {loading && (
